@@ -8,6 +8,7 @@ public class takedmgenemy: MonoBehaviour
 {
     public int enemylive = 1;
     public GameObject enemy;
+    public GameObject spawn;
    // public GameObject enemyattack;
     //  public GameObject boss;
 
@@ -16,6 +17,9 @@ public class takedmgenemy: MonoBehaviour
     {
         //Kalla på din coroutine här
       //  StartCoroutine(EnemyAttack());
+      spawn = GameObject.Find("spawn");
+        
+
     }
 
 
@@ -29,9 +33,11 @@ public class takedmgenemy: MonoBehaviour
         if (other.tag == "Player")
         {
             enemylive -= 1;
-            if (enemylive < 0)
+            if (enemylive <= 0)
             {
+                spawn.GetComponent<spawn>().startspawn();
                 Destroy(gameObject);
+
                // SceneManager.LoadScene("Level 2");
             }
         }
