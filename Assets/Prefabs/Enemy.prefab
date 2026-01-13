@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6711217392124656667}
   - component: {fileID: 9014297723119580166}
   - component: {fileID: 3676217315187285492}
-  - component: {fileID: 39699468467112423}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -179,16 +178,3 @@ MonoBehaviour:
   enemylive: 1
   enemy: {fileID: 0}
   spawn: {fileID: 0}
---- !u!114 &39699468467112423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4012011476134414351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45da0a7e7f518314d89deac78b91f17a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
