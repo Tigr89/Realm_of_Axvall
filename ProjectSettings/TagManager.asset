@@ -2,8 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - target
+  - target2
   layers:
   - Default
   - TransparentFX
@@ -41,3 +43,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ground
+    uniqueID: 3963682829
+    locked: 0
+  - name: player
+    uniqueID: 3769679557
+    locked: 0
+  m_RenderingLayers:
+  - Default
