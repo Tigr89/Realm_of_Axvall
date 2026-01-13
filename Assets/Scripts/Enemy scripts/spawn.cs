@@ -29,8 +29,8 @@ public class spawn : MonoBehaviour
     }
     IEnumerator SpawnEnemy()
     {
-        float SpawnX = player.transform.position.x + 3;
-        float SpawnY = player.transform.position.y + 1;
+        float SpawnX = player.transform.position.x + Random.Range(-4.0f, 4.0f);
+        float SpawnY = player.transform.position.y + Random.Range(-4.0f, 4.0f);
 
         yield return new WaitForSeconds(2);
         Instantiate(enemy,new Vector3(SpawnX, SpawnY, 0),transform.rotation);
