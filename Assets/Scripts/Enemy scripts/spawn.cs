@@ -6,7 +6,7 @@ using UnityEngine;
 public class spawn : MonoBehaviour
 {
     public GameObject enemy;
-    public int spawnrate = 20;
+    public int spawnrate = 10;
     public GameObject player;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,8 +15,8 @@ public class spawn : MonoBehaviour
         transform.position = new Vector3(3.4f, -0.2f, 0);
         for (var i = 0; i < spawnrate; i++)
         {
-            float startposx = Random.Range(-8.0f, 8.0f);
-            float startposy = Random.Range(-8.0f, 8.0f);
+            float startposx = Random.Range(-9.0f, 9.0f);
+            float startposy = Random.Range(-5.0f, 5.0f);
             Instantiate(enemy, new Vector3(startposx, startposy, 0), Quaternion.identity);
            // stats.GetComponent<statisticsManager>().healthyCount++;
         }

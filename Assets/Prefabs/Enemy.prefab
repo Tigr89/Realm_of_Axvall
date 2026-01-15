@@ -176,5 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemylive: 1
-  enemy: {fileID: 0}
-  spawn: {fileID: 0}
+  enemy: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+  spawn: {fileID: 4012011476134414351}
