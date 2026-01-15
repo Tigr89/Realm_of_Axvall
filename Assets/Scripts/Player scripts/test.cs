@@ -26,12 +26,15 @@ public class test : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        /*
         player = new playertest(classString);
         hp = player.health;
         str = player.strengh;
         intel = player.inteligence;
         dex = player.dexterity;
         experience = player.experience;
+        */
+        changeClass();
     }
 
     // Update is called once per frame
@@ -40,16 +43,32 @@ public class test : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            experience += 99;
+            levelUp();
         }
-        
+
+        /*if (player.experience >= experienceToNextLevel)
+        {
+            levelUp();
+        }*/
+        hp = player.health;
+        str = player.strengh;
+        intel = player.inteligence;
+        dex = player.dexterity;
+    }
+    void changeClass()
+    {
+        player = new playertest(classString);
+        hp = player.health;
+        str = player.strengh;
+        intel = player.inteligence;
+        dex = player.dexterity;
 
         if (player.CharacterClass == BasePlayer.characterClass.WARRIOR)
         {
             isWarrior = true;
             isMage = false;
             isRogue = false;
-            
+
         }
         else if (player.CharacterClass == BasePlayer.characterClass.MAGE)
         {
@@ -63,20 +82,6 @@ public class test : MonoBehaviour
             isMage = false;
             isRogue = true;
         }
-        changeClass();
-
-        if (player.experience >= experienceToNextLevel)
-        {
-            levelUp();
-        }
-    }
-    void changeClass()
-    {
-        player = new playertest(classString);
-        hp = player.health;
-        str = player.strengh;
-        intel = player.inteligence;
-        dex = player.dexterity;
     }
     void levelUp()
     { 
@@ -84,16 +89,17 @@ public class test : MonoBehaviour
 
         if (isWarrior)
         {
-            player.warriorlevelup();
+            this.player.warriorlevelup();
         }
         else if (isMage)
         {
-            player.magelevelup();
+            this.player.magelevelup();
         }
         else if (isRogue)
         {
-            player.roguelevelup();
+            this.player.roguelevelup();
         }
         
     }
+    
 }

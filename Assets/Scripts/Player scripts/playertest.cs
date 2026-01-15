@@ -32,4 +32,25 @@ public class playertest : BasePlayer
             experience = 0;
         }
     }
+    public void warriorlevelup()
+    {
+        health += 20;
+        strengh += 5;
+        inteligence += 2;
+        dexterity += 3;
+    }
+    public void magelevelup()
+    {
+        health += 15;
+        strengh += 3;
+        inteligence += 5;
+        dexterity += 2;
+    }
+    public void roguelevelup()
+    {
+        health += 10;
+        strengh += 2;
+        inteligence += 3;
+        dexterity += 5;
+    }
 }
