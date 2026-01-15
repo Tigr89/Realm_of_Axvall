@@ -13,7 +13,7 @@ public class spawn : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(3.4f, -0.2f, 0);
-        for (var i = 0; i < spawnrate; i++)
+        for (int i = 0; i < spawnrate; i++)
         {
             float startposx = Random.Range(-9.0f, 9.0f);
             float startposy = Random.Range(-5.0f, 5.0f);
@@ -25,6 +25,7 @@ public class spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
 
     }
     IEnumerator SpawnEnemy()
