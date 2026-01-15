@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a026dd8b9292b4841b221094d5fb5969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   hp: 0
   str: 0
   intel: 0
@@ -243,7 +244,8 @@ MonoBehaviour:
   isWarrior: 0
   isMage: 0
   isRogue: 0
-  classString: WARRIOR
+  classString: MAGE
+  experienceToNextLevel: 100
 --- !u!4 &348681656
 Transform:
   m_ObjectHideFlags: 0

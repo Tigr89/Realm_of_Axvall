@@ -1,12 +1,22 @@
 using UnityEngine;
 
-public class playertest : BasePlayer
+public class PlayerBase : BaseEntity
 {
-    public playertest(string _string)
+    
+    public PlayerBase()
+    {
+        health = 100;
+        strengh = 5;
+        inteligence = 5;
+        dexterity = 5;
+        experience = 0;
+        
+    }
+    public void chooseclass(string _string)
     {
         if (_string == "WARRIOR")
         {
-            CharacterClass = characterClass.WARRIOR;
+            CharacterClass = rpgClass.WARRIOR;
             health = 100;
             strengh = 15;
             inteligence = 5;
@@ -15,7 +25,7 @@ public class playertest : BasePlayer
         }
         else if (_string == "MAGE")
         {
-            CharacterClass = characterClass.MAGE;
+            CharacterClass = rpgClass.MAGE;
             health = 100;
             strengh = 10;
             inteligence = 15;
@@ -24,11 +34,21 @@ public class playertest : BasePlayer
         }
         else if (_string == "ROGUE")
         {
-            CharacterClass = characterClass.ROGUE;
+            CharacterClass = rpgClass.ROGUE;
             health = 100;
             strengh = 5;
             inteligence = 10;
             dexterity = 15;
+            experience = 0;
+        }
+        else
+        {
+            Debug.Log("Invalid class string. Defaulting to WARRIOR.");
+            CharacterClass = rpgClass.WARRIOR;
+            health = 100;
+            strengh = 15;
+            inteligence = 5;
+            dexterity = 10;
             experience = 0;
         }
     }
