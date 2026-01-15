@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class playertest : BasePlayer
+public class playertest : playertes
 {
     public playertest()
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BasePlayer
+public class playertes
 {
     public int health;
 

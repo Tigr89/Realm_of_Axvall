@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Invetorysystem : MonoBehaviour
 {
-    public int health_potions = 0;
+    public int healthPotions = 0;
     public int gold = 0;
-    public bool has_weapon = false;
+
     void Start()
     {
         
@@ -20,13 +20,12 @@ public class Invetorysystem : MonoBehaviour
     {
         if (other.gameObject.name == "Health potion")
         {
-            health_potions += 1;
-            Debug.Log("Health potions: " + health_potions);
+            healthPotions += 1;
+
         }
     }
 
-    public void OTriggerEnter(Collider other)
-    {
-        Debug.Log("Health potions: " + health_potions);
-    }
+
+
+    
 }
