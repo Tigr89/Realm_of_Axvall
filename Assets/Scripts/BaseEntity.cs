@@ -20,6 +20,8 @@ public class BaseEntity : MonoBehaviour
     public enum enemyType
     {
         CHICKEN,
+        SNAKE,
+        ZOMBIE,
         DRAGON
     }
     public int Health
@@ -58,7 +60,7 @@ public class BaseEntity : MonoBehaviour
         set;
     }
     
-    public enemyType CharacterType
+    public enemyType EnemyType
     {
         get;
         set;
