@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 3f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    private int dexterity = 10;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,9 +19,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        dexterity = GetComponent<PlayerBase>().dexterity;
+        TempMoveInput();
+        rb.linearVelocity = moveSpeed * moveInput * dexterity / 10;
         //This line of code handles movement
-        rb.linearVelocity = moveSpeed * moveInput;
+        //rb.linearVelocity = moveSpeed * moveInput;
 
     }
 
@@ -28,5 +32,8 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
     }
-
+    void TempMoveInput()
+    {
+        moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+    }
 }
