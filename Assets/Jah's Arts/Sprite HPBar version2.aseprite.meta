@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: da6df22692fd0304d8fbd556fb993b74
+guid: 23a3f7973950ad34ab78545f29d27b97
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Sprite-HP
+  - name: Sprite HPBar version2
     originalName: 
-    pivot: {x: 0.44055945, y: -0.90909094}
+    pivot: {x: 0.5448276, y: -0.8333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 143
-      height: 11
-    spriteID: f89790ffdc670f24c8d1489ef5ec446f
+      width: 145
+      height: 12
+    spriteID: 9a16323f907a0f94685114595c8794b7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,25 +148,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1144918242
+      value0: 2685795508
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Sprite-HP
+    name: Sprite HPBar version2
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Sprite-HP
+    - name: Sprite HPBar version2
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 17
+        x: 1
         y: 10
-        width: 143
-        height: 11
-      spriteId: f89790ffdc670f24c8d1489ef5ec446f
+        width: 145
+        height: 12
+      spriteId: 9a16323f907a0f94685114595c8794b7
     linkedCells: []
     parentIndex: -1
   platformSettings:
