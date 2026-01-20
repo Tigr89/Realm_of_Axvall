@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class playertes
+public class BaseEntity : MonoBehaviour
 {
+    [Header("Stats")]
     public int health;
 
     public int strengh;
@@ -10,6 +11,19 @@ public class playertes
 
     public int experience;
 
+    public enum rpgClass 
+    {
+        WARRIOR,
+        MAGE,
+        ROGUE, 
+    }
+    public enum enemyType
+    {
+        CHICKEN,
+        SNAKE,
+        ZOMBIE,
+        DRAGON
+    }
     public int Health
     {
         get { return health; }
@@ -40,7 +54,23 @@ public class playertes
         set { experience = value; }
     }
 
+    public rpgClass CharacterClass
+    {
+        get;
+        set;
+    }
+    
+    public enemyType EnemyType
+    {
+        get;
+        set;
+    }
 
+    protected void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
+    
 }
 
 

@@ -17,8 +17,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //This line of code handles movement
         rb.linearVelocity = moveSpeed * moveInput;
+
     }
 
     //This function returns a value between -1 and 1 in both X and Y-axis depending on player input
