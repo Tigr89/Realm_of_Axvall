@@ -22,10 +22,9 @@ public class PlayerStats : PlayerBase
     void Update()
     {
         
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (health <= 0)
         {
-            experience += 50;
+            PlayerDie();
         }
 
         if (experience >= experienceToNextLevel)

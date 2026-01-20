@@ -73,4 +73,13 @@ public class PlayerBase : BaseEntity
         inteligence += 3;
         dexterity += 5;
     }
+
+    protected void PlayerDie()
+    {
+                Debug.Log("Player has died.");
+        // Additional logic for player death can be added here
+        // For example, triggering a game over screen or respawning
+
+    }
+
 }

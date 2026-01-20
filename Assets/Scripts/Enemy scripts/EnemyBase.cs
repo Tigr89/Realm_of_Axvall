@@ -11,7 +11,7 @@ public class EnemyBase : BaseEntity
         //experience = 20; //kanske användas för att ge spelaren xp när fienden dödas
     }
 
-    public void setEnemyType(string _string)
+    public void SetEnemyType(string _string)
     {
         if (_string == "CHICKEN")
         {
@@ -60,4 +60,21 @@ public class EnemyBase : BaseEntity
             //experience = 20; //om det ska användas för att ge spelaren xp när fienden dödas
         }
     }
+
+    protected void EnemyDie()
+    {
+
+        Debug.Log("Enemy has died.");
+        // Additional death logic can be added here
+        Debug.Log("LOOT HAS BEEN DROPPED!");
+        // instert loot drop logic here
+
+
+
+
+
+        Destroy(this.gameObject);
+        
+    }
+
 }

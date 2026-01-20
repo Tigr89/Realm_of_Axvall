@@ -66,6 +66,10 @@ public class BaseEntity : MonoBehaviour
         set;
     }
 
+    protected void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
     
 }
 
