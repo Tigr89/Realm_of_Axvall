@@ -3,7 +3,7 @@ using UnityEngine;
 public class Invetorysystem : MonoBehaviour
 {
     public int healthPotions = 0;
-    public int gold = 0;
+    public int manaPotions = 0;
 
     void Start()
     {
@@ -21,6 +21,12 @@ public class Invetorysystem : MonoBehaviour
         if (other.gameObject.name == "Health potion")
         {
             healthPotions += 1;
+
+        }
+
+        if (other.gameObject.name == "Mana potion")
+        {
+            manaPotions += 1;
 
         }
     }

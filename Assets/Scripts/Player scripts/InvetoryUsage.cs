@@ -23,17 +23,17 @@ public class InvetoryUsage : MonoBehaviour
             {
                 healthPotionCooldown = Time.time + 3;
                 StartCoroutine(UseHealthPotion());
-                Debug.Log("Used a health potion.");
+
           
             }
         }
 
-        Debug.Log("HealthCooldown: " + healthPotionCooldown);
+
     }
 
     public IEnumerator UseHealthPotion()
     {
-        Debug.Log("Health potion used.");
+
         inventory.healthPotions -= 1;
         playerStats.Health += 20;
         

@@ -9,6 +9,7 @@ public class UiScript : MonoBehaviour
     public TextMeshProUGUI playerHealthText;
 
     public TextMeshProUGUI healthPotionText;
+    public TextMeshProUGUI manaPotionText;
     void Start()
     {
           
@@ -18,5 +19,7 @@ public class UiScript : MonoBehaviour
     void Update()
     {
         healthPotionText.text = "Health Potions: " + playerInventory.healthPotions;
+        manaPotionText.text = "Mana Potions: " + playerInventory.manaPotions;
+        
     }
 }
