@@ -9,6 +9,8 @@ public class EnemyStats : EnemyBase
     public bool isZombie;
     public bool isDragon;
 
+
+    [Header("DEBUG/TESTING")]
     public string typeString = "CHICKEN";
 
     //public int debugDamage;

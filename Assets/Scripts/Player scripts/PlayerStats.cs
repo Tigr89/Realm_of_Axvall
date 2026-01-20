@@ -7,7 +7,8 @@ public class PlayerStats : PlayerBase
     public bool isWarrior;
     public bool isMage;
     public bool isRogue;
-    
+
+    [Header("DEBUG/TESTING")]
     public string classString = "WARRIOR";
     public float experienceToNextLevel = 100;
 
