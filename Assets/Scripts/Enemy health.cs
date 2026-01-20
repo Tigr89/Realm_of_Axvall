@@ -7,7 +7,7 @@ public class Enemyhealth : MonoBehaviour
     public int enemyHealth;
     void Start()
     {
-        int enemyHealth = baseEnemyHealth * enemyLevel;
+        enemyHealth = baseEnemyHealth * enemyLevel;
     }
 
    
