@@ -192,8 +192,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4173228
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6885515
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0022435784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07811302
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -286,6 +310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ebacfb8960e094c967e22793980d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInAttackRange: 0
+  chaseState: {fileID: 0}
 --- !u!4 &510504060
 Transform:
   m_ObjectHideFlags: 0
@@ -632,7 +658,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackState: {fileID: 510504059}
+  idleState: {fileID: 0}
   isInAttackRange: 0
+  speed: 1.5
 --- !u!4 &1622656053
 Transform:
   m_ObjectHideFlags: 0

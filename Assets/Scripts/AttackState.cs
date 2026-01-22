@@ -2,9 +2,18 @@ using UnityEngine;
 
 public class AttackState : State
 {
+    public bool isInAttackRange;
+    public ChaseState chaseState;
     public override State RunCurrentState()
     {
-        Debug.Log("I have Attacked");   
-        return this;
+        if (isInAttackRange)
+        {
+           
+            return this;
+        }
+        else
+        {
+            return chaseState;
+        }
     }
 }
