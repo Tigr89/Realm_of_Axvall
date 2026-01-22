@@ -6,13 +6,12 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject player;
-   // public int playerlive;
     public GameObject Blade;
+    public int dmg;
     
-    //player
-   // public int playerhealth = 6;
-    // public List<Image> healthImage;
-
+    public Animator animator;
+    public float delay = 0.3f;
+    private bool attackBlocked;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,34 +23,42 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) && attackBlocked == false)
+        {
+            Attack();
+        }
+
 
     }
-   /* void OnTriggerEnter2D(Collider2D other)
+   void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "enemyattack")
+        if (other.tag == "Enemy")
         {
-            DamagePlayer(1);
+          //  other.GetComponent<enemy>.takedamage(dmg);
         }
     }
    
-    public void DamagePlayer(int dmg)
-    {
-        playerhealth -= dmg;
-    }*/
+   
     IEnumerator bladeCoroutine()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(0.3f);
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void Calkdmg()
     {
-        if (other.tag == "Player")
-        {
-            other.GetComponent<player>().playerhealth -= 1;
-            if (other.GetComponent<player>().playerhealth <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
+        // damage calculator 
+    }
+    public void Attack()
+    {
+        if (attackBlocked) 
+        return;
+        animator.SetTrigger("Attack");
+        attackBlocked = true;
+        StartCoroutine(DelayAttack());
+    }
+    private IEnumerator DelayAttack()
+    {
+        yield return new WaitForSeconds(delay);
+        attackBlocked = false;
     }
 }
 
