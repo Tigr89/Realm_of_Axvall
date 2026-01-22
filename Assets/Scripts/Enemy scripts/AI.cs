@@ -19,8 +19,12 @@ public class AI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        agent.SetDestination(Target.transform.position);
+    }
+    
+    
        
         /*
         if(agent.destination != GameObject.FindWithTag("target2").transform.position)
@@ -34,18 +38,25 @@ public class AI : MonoBehaviour
         }
         */
 
-    }
-    /*
-    public void OnCollisionEnter2D(Collision2D other)
+
+
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "target")
         {
-            agent.SetDestination(GameObject.FindWithTag("target2").transform.position);
+            
+            agent.isStopped = true;
+            Debug.Log(agent.isStopped + "Stoppad");
         }
-        else if(other.gameObject.tag == "target2")
-        {
-            agent.SetDestination(GameObject.FindWithTag("target").transform.position);
-        }
+
     }
-    */
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "target")
+        {
+            agent.isStopped = false;
+            Debug.Log(agent.isStopped + "not Stoppad");
+        }
+
+    }
 }
