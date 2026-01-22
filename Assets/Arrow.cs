@@ -1,29 +1,41 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class Arrow : MonoBehaviour
 {
-    public float speed = 5f;
-    public float damage = 10f;
-
-    //public Vector3 targetPosition;
-    public Vector2 direction;
+    public Rigidbody2D rb;
+    public GameObject sprite;
+    public float projectileSpeed = 10f;
+    public float lifetimeSeconds = 2f;
     
-    private void Start()
+    Vector3 worldMousePos;
+    Vector2 direction;
+
+    void Start()
     {
-        // Only update the target for the first click position
+        SetDir();
+        Destroy(gameObject, lifetimeSeconds);
+    }
+
+
+    void Update()
+    {
+        
+        if (direction != null)
+        {
+            rb.linearVelocity = direction * projectileSpeed;
+        }
+        else
+        {
+            rb.linearVelocity = Vector3.up * projectileSpeed;
+        }
         
     }
-    private void Update()
+    private void SetDir()
     {
-        Move();
-    }
+        worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        direction = (Vector2)((worldMousePos - transform.position));
+        direction.Normalize();
 
-    
-    public void Move()
-    {
-        transform.position = speed * direction * Time.deltaTime;
+        sprite.transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
     }
 }

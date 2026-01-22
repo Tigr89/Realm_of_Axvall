@@ -3,6 +3,11 @@ using UnityEngine;
 public class RangerAttacksTest : MonoBehaviour
 {
     public GameObject basicArrow;
+    public GameObject arrowRain;
+
+    private Vector3 mousePos;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,15 +21,35 @@ public class RangerAttacksTest : MonoBehaviour
         {
             BasicAttack();
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            SpecialAttack();
+        }
+        if (Input.GetMouseButtonDown(2))
+        {
+            UltimateAttack();
+        }
     }
 
     void BasicAttack()
     {
         Debug.Log("Ranger Attack 1 executed.");
         var new_basic_arrow = Instantiate(basicArrow, transform.position, Quaternion.identity);
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0f; // Set z to 0 since we're in 2D
-        Vector2 direction = (mousePosition - transform.position).normalized;
-        new_basic_arrow.GetComponent<Arrow>().direction = direction;
+        
+    }
+    void SpecialAttack()
+    {
+        Debug.Log("Ranger Attack 2 executed.");
+        var new_special_arrow = Instantiate(basicArrow, transform.position, Quaternion.identity);
+        var new_special_arrow2 = Instantiate(basicArrow, transform.position + new Vector3(0.2f,0.2f), Quaternion.identity);
+        var new_special_arrow3 = Instantiate(basicArrow, transform.position + new Vector3(-0.2f,0.2f), Quaternion.identity);
+
+    }
+    void UltimateAttack()
+    {
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log("Ranger Ultimate executed.");
+        var new_ultimate_arrow = Instantiate(arrowRain,mousePos,Quaternion.identity);
+        new_ultimate_arrow.transform.position = new Vector3(new_ultimate_arrow.transform.position.x, new_ultimate_arrow.transform.position.y, 0f);
     }
 }
