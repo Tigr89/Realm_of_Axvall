@@ -2,7 +2,7 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementHL : MonoBehaviour
 {
     public float moveSpeed = 3f;
     private Rigidbody2D rb;
