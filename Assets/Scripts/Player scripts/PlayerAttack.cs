@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
     
     public Animator animator;
     public float delay = 0.3f;
-    private bool attackBlocked;
+    private bool attackBlocked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +25,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && attackBlocked == false)
         {
+            Debug.Log("Inne i space/attackblocked");
             Attack();
         }
 
@@ -53,11 +54,14 @@ public class PlayerAttack : MonoBehaviour
         return;
         animator.SetTrigger("Attack");
         attackBlocked = true;
+        Debug.Log("Inne i attack");
         StartCoroutine(DelayAttack());
+        
     }
     private IEnumerator DelayAttack()
     {
         yield return new WaitForSeconds(delay);
+        Debug.Log("Delay");
         attackBlocked = false;
     }
 }
