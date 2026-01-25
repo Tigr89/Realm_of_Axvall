@@ -4,12 +4,12 @@ public class PlayerStats : PlayerBase
 { 
 
     [Header("Class Bools")]
-    public bool isWarrior;
-    public bool isMage;
-    public bool isRogue;
+    private bool isWarrior; //Tobias ändrat till private för att inte förvirra de som jobbar med spelaren
+    private bool isMage;
+    private bool isRogue;
 
     [Header("DEBUG/TESTING")]
-    public string classString = "WARRIOR";
+    public string classString = "WARRIOR"; //Kanske bör vara radioknappar som väljer klass istället för att användaren ska skriva in en string.
     public float experienceToNextLevel = 100;
 
 

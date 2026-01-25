@@ -242,7 +242,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1755462383
+--- !u!1001 &1492638087
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -256,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4056959393542868596, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 4056959393542868596, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -294,65 +294,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6614137119261338602, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: classString
+      value: ROGUE
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1755462386}
-    - targetCorrespondingSourceObject: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1755462385}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
---- !u!1 &1755462384 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
-  m_PrefabInstance: {fileID: 1755462383}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1755462385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755462384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e12e0c469b9450d4187043ed9865d960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  strengh: 5
-  inteligence: 5
-  dexterity: 5
-  experience: 0
-  isWarrior: 0
-  isMage: 0
-  isRogue: 0
-  classString: WARRIOR
-  experienceToNextLevel: 100
---- !u!114 &1755462386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755462384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64aa15a28f84f0944ac2375082450b88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  strengh: 5
-  inteligence: 5
-  dexterity: 5
-  experience: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1310140256}
   - {fileID: 506312172}
-  - {fileID: 1755462383}
+  - {fileID: 1492638087}

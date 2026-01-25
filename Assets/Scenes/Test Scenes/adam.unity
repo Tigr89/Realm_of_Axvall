@@ -220,6 +220,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875775386122701560, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.16
       objectReference: {fileID: 0}
@@ -233,12 +237,17 @@ PrefabInstance:
       objectReference: {fileID: 858166130684811335, guid: ce3f288797df3134b9c366f5a225167a, type: 3}
     m_RemovedComponents:
     - {fileID: 5138130451785439351, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+    - {fileID: 6519818284830529059, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+    - {fileID: 6614137119261338602, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4056959393542868596, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1099974763}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 287540441}
     - targetCorrespondingSourceObject: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 287540431}
@@ -281,6 +290,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 1293079312}
+--- !u!114 &287540441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287540427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fbc11b2052cc84b966b54c33b14372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  strengh: 5
+  inteligence: 0
+  dexterity: 0
+  experience: 0
 --- !u!1 &510504058
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +395,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

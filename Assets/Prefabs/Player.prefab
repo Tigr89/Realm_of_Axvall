@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4056959393542868596}
+  - component: {fileID: 6519818284830529059}
+  - component: {fileID: 6614137119261338602}
   - component: {fileID: 7659121806349153440}
   - component: {fileID: 5875775386122701560}
   - component: {fileID: 2518608146043638409}
@@ -35,6 +37,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6519818284830529059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3590196712890668588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f2652d2e4e749488e503e8a0abd512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+--- !u!114 &6614137119261338602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3590196712890668588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12e0c469b9450d4187043ed9865d960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  strengh: 5
+  inteligence: 5
+  dexterity: 5
+  experience: 0
+  isWarrior: 0
+  isMage: 1
+  isRogue: 0
+  classString: WARRIOR
+  experienceToNextLevel: 100
 --- !u!212 &7659121806349153440
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58,7 +95,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
