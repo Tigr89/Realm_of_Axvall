@@ -268,9 +268,7 @@ MonoBehaviour:
   inteligence: 5
   dexterity: 5
   experience: 0
-  isWarrior: 0
-  isMage: 0
-  isRogue: 0
+  attackScript: {fileID: 142681839}
   classString: ROGUE
   experienceToNextLevel: 100
 --- !u!114 &142681845
@@ -285,6 +283,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8838635e85bb64fad7d04debf07052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicAttackCooldown: 1
+  specialAttackCooldown: 3
+  ultimateAttackCooldown: 10
+  boltDamage: 0
+  boltSpeed: 0
+  fireballDamage: 0
+  fireballSpeed: 0
+  lightningBoltDamagePerSecond: 0
+  lightningBoltDuration: 0
+  swingDamage: 0
+  slamDamage: 0
+  slamKnockback: 0
+  whirlwindDamagePerSecond: 0
+  whirlwindDuration: 0
+  arrowDamage: 10
+  arrowSpeed: 10
+  arrowLifetime: 2
+  arrowRainDuration: 5
+  arrowRainDamagePerSecond: 5
   basicArrow: {fileID: 1214641080154895485, guid: 8df852a5b2e8b8b48832e7b5a3cd4ec8, type: 3}
   arrowRain: {fileID: 111032241097755575, guid: af9ef92416f491b4c81566a8743484d6, type: 3}
 --- !u!1 &869378698
