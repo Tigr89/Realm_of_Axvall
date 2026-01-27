@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - target
-  - target2
+  - Enemy
+  - spawn
   layers:
   - Default
   - TransparentFX
@@ -42,12 +42,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: ground
-    uniqueID: 3963682829
-    locked: 0
-  - name: player
-    uniqueID: 3769679557
     locked: 0
   m_RenderingLayers:
   - Default
