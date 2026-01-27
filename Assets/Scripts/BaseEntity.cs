@@ -69,6 +69,7 @@ public class BaseEntity : MonoBehaviour
     protected void TakeDamage(int damage)
     {
         health -= damage;
+        // armor osv
     }
     
 }

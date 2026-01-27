@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - consumable
+  - Enemy
+  - spawn
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - 
   - 
-  - UI Blackground
+  - 
   - 
   - 
   - 
