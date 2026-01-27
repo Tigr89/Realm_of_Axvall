@@ -2,10 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class playerInvetory : MonoBehaviour
+public class playerInvetory : MonoBehaviour 
 {
+    
     public PlayerStats playerStats;
-    public InvetorySystem inventory;
+
     private float healthPotionCooldown = 0;
     
 
@@ -14,7 +15,7 @@ public class playerInvetory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {     
-            if (inventory.healthPotions > 0 && Time.time > healthPotionCooldown && playerStats.Health < 100)
+            if (InvetorySystem.healthPotions > 0 && Time.time > healthPotionCooldown && playerStats.Health < 100)
             {
                 healthPotionCooldown = Time.time + 3;
                 StartCoroutine(UseHealthPotion());
@@ -25,7 +26,7 @@ public class playerInvetory : MonoBehaviour
     public IEnumerator UseHealthPotion()
     {
 
-        inventory.healthPotions -= 1;
+        InvetorySystem.healthPotions -= 1;
         playerStats.Health += 20;
         
        yield return null;

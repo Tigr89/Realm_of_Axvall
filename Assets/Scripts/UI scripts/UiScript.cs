@@ -6,7 +6,6 @@ public class UiScript : MonoBehaviour
 {
 
     [ Header("Player References")]
-    public InvetorySystem InvetorySystem;
     public PlayerStats playerStats;
 
 
@@ -25,8 +24,10 @@ public class UiScript : MonoBehaviour
     public Slider XPslider;
     void Awake()
     {
-        
+        //kalla på funktionen om HiddenInventory inte är null
     }
+
+    //Skapa en funktion som lagrar InventorySystem från HiddenInventory
 
     // Update is called once per frame
     void Update()

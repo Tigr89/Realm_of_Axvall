@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class InvetorySystem : MonoBehaviour
+public static class InvetorySystem
 {
-    public int healthPotions = 0;
-    public int manaPotions = 0; // Kanske kommer användas senare, får se.
+    public static int healthPotions = 0;
+    public static int manaPotions = 0; // Kanske kommer användas senare, får se.
+ 
+    
 
 }

@@ -5,7 +5,7 @@ public class ManaPotions : MonoBehaviour
 
 
 
-    public InvetorySystem invetorysystem;
+
     void Start()
     {
 
@@ -21,9 +21,9 @@ public class ManaPotions : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (invetorysystem.manaPotions <= 4)
+            if (InvetorySystem.manaPotions <= 4)
             {
-                invetorysystem.manaPotions += 1;
+                InvetorySystem.manaPotions += 1;
                 Destroy(gameObject);
             }
         }
