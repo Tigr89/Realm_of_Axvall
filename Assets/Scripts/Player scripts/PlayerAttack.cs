@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using System;
+
 
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject player;
     public GameObject Blade;
     public int dmg;
-    
+
+
     public Animator animator;
     public float delay = 0.3f;
     private bool attackBlocked;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
         StartCoroutine(bladeCoroutine());
 
     }
@@ -27,9 +30,18 @@ public class PlayerAttack : MonoBehaviour
         {
             Attack();
         }
-
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.Space))
+        {
+            animator.SetTrigger("Side Attack");
+        }
+        else
+        {
+          //  animator.SetTrigger("");
+        }
 
     }
+
+
    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")
