@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 public class AI : MonoBehaviour
 {
+    public FOV fov;
     [SerializeField] Transform Target; 
     NavMeshAgent agent;
 
@@ -15,16 +16,27 @@ public class AI : MonoBehaviour
         agent.updateUpAxis = false;
         var Target = GameObject.FindWithTag("target");
         agent.SetDestination(Target.transform.position);
-        
+        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
+        fov = enemy.GetComponent<FOV>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(fov.CanseePlayer == true)
+        {
+        agent.isStopped = false;
+        
+        }
+        else if(fov.CanseePlayer == false)
+        {
+            agent.isStopped = true;
+        }
         agent.SetDestination(Target.transform.position);
     }
     
-    
+
+
        
         /*
         if(agent.destination != GameObject.FindWithTag("target2").transform.position)
@@ -39,7 +51,7 @@ public class AI : MonoBehaviour
         */
 
 
-
+    /*
     public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "target")
@@ -59,4 +71,5 @@ public class AI : MonoBehaviour
         }
 
     }
+    */
 }

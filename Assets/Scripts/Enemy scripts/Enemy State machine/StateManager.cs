@@ -15,13 +15,13 @@ public class StateManager : MonoBehaviour
         if (currentState.GetType() == typeof(IdleState))
         {
 
-            Debug.Log("walking around");
+            //Debug.Log("walking around");
         }
 
         if (currentState.GetType() == typeof(ChaseState))
         {
             
-            Debug.Log("Han jagar");
+            //Debug.Log("Han jagar");
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, 5 * Time.deltaTime);
         }
 
@@ -31,7 +31,7 @@ public class StateManager : MonoBehaviour
             //if AttackState == true
 
             //attack
-            Debug.Log("I have Attacked");
+            //Debug.Log("I have Attacked");
             StartCoroutine(AttackTimer());
 
         }
