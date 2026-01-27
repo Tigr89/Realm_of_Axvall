@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901b803d44db3694bbdadc6c31f45ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInventory: {fileID: 0}
-  playerStats: {fileID: 0}
+  playerInventory: {fileID: 9018669315984856790, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+  playerStats: {fileID: 6614137119261338602, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
   playerHealthText: {fileID: 7414500057700517051}
   healthPotionText: {fileID: 636468844567533321}
   manaPotionText: {fileID: 7610122584785818547}

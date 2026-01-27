@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class ManaPotionScript : MonoBehaviour
+public class ManaPotions : MonoBehaviour
 {
-    public Invetorysystem invetorysystem;
+
+
+
+    public InvetorySystem invetorysystem;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -26,3 +29,5 @@ public class ManaPotionScript : MonoBehaviour
         }
     }
 }
+
+

@@ -6,7 +6,7 @@ public class UiScript : MonoBehaviour
 {
 
     [ Header("Player References")]
-    public Invetorysystem playerInventory;
+    public InvetorySystem InvetorySystem;
     public PlayerStats playerStats;
 
 
@@ -23,16 +23,16 @@ public class UiScript : MonoBehaviour
     public Slider healthSlider;
     public Slider manaSlider;
     public Slider XPslider;
-    void Start()
+    void Awake()
     {
-          
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthPotionText.text = "Health Potions: " + playerInventory.healthPotions;
-        manaPotionText.text = "Mana Potions: " + playerInventory.manaPotions;
+        healthPotionText.text = "Health Potions: " + InvetorySystem.healthPotions;
+        manaPotionText.text = "Mana Potions: " + InvetorySystem.manaPotions;
         playerHealthText.text = "HP: " + playerStats.Health;
 
 

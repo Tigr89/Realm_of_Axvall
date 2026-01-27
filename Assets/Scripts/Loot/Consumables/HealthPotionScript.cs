@@ -2,27 +2,32 @@ using UnityEngine;
 
 public class HealthPotionScript : MonoBehaviour
 {
-    public Invetorysystem invetorysystem;
+
+
+
+    public InvetorySystem InvetorySystem;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (invetorysystem.healthPotions <= 4)
+            if (InvetorySystem.healthPotions <= 4)
             {
-                invetorysystem.healthPotions += 1;
+                InvetorySystem.healthPotions += 1;
                 Destroy(gameObject);
             }
         }
     }
 }
+
+
