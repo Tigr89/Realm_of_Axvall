@@ -4,7 +4,12 @@ using UnityEngine.AI;
 
 public class AI : MonoBehaviour
 {
+
+    //script referenses
     public FOV fov;
+    private StateManager states;
+
+
     [SerializeField] Transform Target; 
     NavMeshAgent agent;
 

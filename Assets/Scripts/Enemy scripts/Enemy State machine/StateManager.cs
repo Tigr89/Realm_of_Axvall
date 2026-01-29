@@ -22,7 +22,7 @@ public class StateManager : MonoBehaviour
         {
             
             //Debug.Log("Han jagar");
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, 5 * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards(transform.position, player.transform.position, 5 * Time.deltaTime);
         }
 
         if (currentState.GetType() == typeof(AttackState))

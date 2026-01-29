@@ -19,9 +19,9 @@ public class FOV : MonoBehaviour
 
     public GameObject Player;
     public Rigidbody2D Playerrb;
-   
 
-
+    //script referens
+    
     public bool CanseePlayer{get; private set;}
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -106,14 +106,10 @@ public class FOV : MonoBehaviour
         return new Vector2(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
-        Debug.Log(CanseePlayer);
-        /*if(Playerrb != null)
-        {
-    
-        }
-        */
+        Debug.Log(CanseePlayer + "can see player");
+
     }
     /*
     private IEnumerator paus()
