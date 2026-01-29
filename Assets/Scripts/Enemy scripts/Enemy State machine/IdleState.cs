@@ -8,7 +8,9 @@ public class IdleState : State
     {
         if (canSeeThePlayer)
         {
+            canSeeThePlayer = false;
             return chaseState;
+           
         }
         else
         {

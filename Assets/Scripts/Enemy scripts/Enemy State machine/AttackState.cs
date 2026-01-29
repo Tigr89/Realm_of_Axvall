@@ -5,17 +5,30 @@ public class AttackState : State
 {
     public bool isInAttackRange;
     public ChaseState chaseState;
+    public State IdleState;
+    public float attackDuration = 2f;
+    float timer;
+    bool entered;
+
     public override State RunCurrentState()
     {
-        if (isInAttackRange)
-        {
 
-            return this;
-        }
-        else
+        if (entered == false)
         {
-            return chaseState;
+            timer = 0;
+            entered = true;
+            Debug.Log("Is attacking!");
         }
+
+        timer += Time.deltaTime;
+
+        if (timer >= attackDuration)
+        {
+            entered = false;
+            return IdleState;
+        }
+
+        return this;
         /*
             //Hej Adam! Har slängt ihop en ganska enkel lösning för dig för hur du återgår till Idle från AttackState.
             //Så som det fungerar nu så bestämmer variabeln "attackDuration" hur länge attacken ska vara och sedan

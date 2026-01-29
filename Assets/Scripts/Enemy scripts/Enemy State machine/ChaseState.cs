@@ -12,6 +12,7 @@ public class ChaseState : State
     {
         if (isInAttackRange)
         {
+            isInAttackRange = false;
             return attackState;
         }
         else 
