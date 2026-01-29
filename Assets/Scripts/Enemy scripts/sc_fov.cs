@@ -30,7 +30,7 @@ public class FOV : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("target");
         
        
-        //StartCoroutine (FOVcheck());
+        StartCoroutine (FOVcheck());
     }
     private void Awake()
     {
@@ -39,7 +39,7 @@ public class FOV : MonoBehaviour
     }
 
 
-    /*private IEnumerator FOVcheck()
+    private IEnumerator FOVcheck()
     {
         WaitForSeconds paus = new WaitForSeconds(0.2f);
         while(true)
@@ -48,7 +48,7 @@ public class FOV : MonoBehaviour
             Fov();
         }
     }
-*/
+
   
     private void Fov()
     {
@@ -109,12 +109,13 @@ public class FOV : MonoBehaviour
     public void Update()
     {
         Debug.Log(CanseePlayer);
-        if(Playerrb != null)
+        /*if(Playerrb != null)
         {
     
         }
-    
+        */
     }
+    /*
     private IEnumerator paus()
     {
         while(true)
@@ -141,7 +142,7 @@ public class FOV : MonoBehaviour
         }
         
     }
-    
+    */
     
     
 }

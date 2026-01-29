@@ -9168,6 +9168,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 9018669315984856790, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 1108733924}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
