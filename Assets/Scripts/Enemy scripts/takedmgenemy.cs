@@ -30,7 +30,7 @@ public class takedmgenemy: MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Weapon")
         {
             enemylive -= 1;
             if (enemylive <= 0)

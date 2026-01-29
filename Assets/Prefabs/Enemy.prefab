@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 381660727302249992}
   - component: {fileID: 1179420437193526935}
   - component: {fileID: 6711217392124656667}
-  - component: {fileID: 9014297723119580166}
   - component: {fileID: 3676217315187285492}
+  - component: {fileID: 4895648696274223138}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -117,7 +117,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &9014297723119580166
+--- !u!114 &3676217315187285492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012011476134414351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae99f94ee3ea72469354b7508d0d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemylive: 1
+  enemy: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+  spawn: {fileID: 0}
+--- !u!61 &4895648696274223138
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,11 +162,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.017446592, y: 0.15631658}
+  m_Offset: {x: 0, y: 0.16}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -161,20 +176,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8382584, y: 0.65362084}
+  m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!114 &3676217315187285492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4012011476134414351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ae99f94ee3ea72469354b7508d0d43c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemylive: 1
-  enemy: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
-  spawn: {fileID: 0}

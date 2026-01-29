@@ -40,7 +40,7 @@ public class PlayerAttack : MonoBehaviour
 
         
 
-        if (Input.GetKeyDown(KeyCode.Space) && attackBlocked == false)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attackBlocked == false)
         {
             Attack();
         }
@@ -81,14 +81,21 @@ public class PlayerAttack : MonoBehaviour
     {
         if (attackBlocked) 
         return;
+        Blade.GetComponent<BoxCollider2D>().enabled = true;
         animator.SetTrigger("Attack");
         attackBlocked = true;
+        StartCoroutine(endColl());
         StartCoroutine(DelayAttack());
     }
     private IEnumerator DelayAttack()
     {
         yield return new WaitForSeconds(delay);
         attackBlocked = false;
+    }
+    private IEnumerator endColl()
+    {
+        yield return new WaitForSeconds(0.3f);
+         Blade.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
 
