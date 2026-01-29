@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
@@ -30,14 +31,16 @@ public class AI : MonoBehaviour
     {
         if(fov.CanseePlayer == true)
         {
-        agent.isStopped = false;
+            agent.SetDestination(Target.transform.position);
+        //agent.isStopped = false;
         
         }
         else if(fov.CanseePlayer == false)
         {
-            agent.isStopped = true;
+            agent.SetDestination(Target.transform.position);
+            //agent.isStopped = true;
         }
-        agent.SetDestination(Target.transform.position);
+        
     }
     
 
