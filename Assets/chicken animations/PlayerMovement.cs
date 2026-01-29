@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         while (true)
         {
-            // Pick one of four directions (no diagonals)
+            // Pick one of four directions 
             int dir = Random.Range(0, 4);
 
             switch (dir)
@@ -58,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
             float waitTime = Random.Range(waitTimeMin, waitTimeMax);
             yield return new WaitForSeconds(waitTime);
         }
+
+
     }
 }
 

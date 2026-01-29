@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: death
+  m_Name: death front anim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -24,19 +24,19 @@ AnimationClip:
       value: {fileID: -8521041687782425855, guid: 627ebd88fa5df8c4a83aaa8f207d94fa, type: 3}
     - time: 0.06666667
       value: {fileID: -2757132750325866852, guid: 627ebd88fa5df8c4a83aaa8f207d94fa, type: 3}
-    - time: 0.2
+    - time: 0.16666667
       value: {fileID: 1431223195786829516, guid: 627ebd88fa5df8c4a83aaa8f207d94fa, type: 3}
-    - time: 0.3
+    - time: 0.26666668
       value: {fileID: -36241285706637049, guid: 627ebd88fa5df8c4a83aaa8f207d94fa, type: 3}
-    - time: 0.36666667
+    - time: 0.33333334
       value: {fileID: -969603094, guid: 627ebd88fa5df8c4a83aaa8f207d94fa, type: 3}
-    - time: 0.48333332
+    - time: 0.43333334
       value: {fileID: 624193482, guid: 627ebd88fa5df8c4a83aaa8f207d94fa, type: 3}
-    - time: 0.56666666
+    - time: 0.5
       value: {fileID: 795647351, guid: 627ebd88fa5df8c4a83aaa8f207d94fa, type: 3}
-    - time: 0.6666667
+    - time: 0.6
       value: {fileID: -1188227472, guid: 627ebd88fa5df8c4a83aaa8f207d94fa, type: 3}
-    - time: 0.75
+    - time: 0.6666667
       value: {fileID: -1622264222, guid: 627ebd88fa5df8c4a83aaa8f207d94fa, type: 3}
     attribute: m_Sprite
     path: 
@@ -74,7 +74,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.76666665
+    m_StopTime: 0.68333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
