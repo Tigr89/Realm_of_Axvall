@@ -34,7 +34,7 @@ public class FOV : MonoBehaviour
     }
     private void Awake()
     {
-        Playerrb = GameObject.Find("target").GetComponent<Rigidbody2D>();
+        Playerrb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
         
     }
 
