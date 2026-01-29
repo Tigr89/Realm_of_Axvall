@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using System;
+using UnityEditor.Experimental.GraphView;
 
 
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject player;
     public GameObject Blade;
+    public GameObject bladeParent;
+    
     public int dmg;
-
+    [SerializeField] private float bladeDistance = 1.5f;
 
     public Animator animator;
     public float delay = 0.3f;
@@ -19,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         
+        
         StartCoroutine(bladeCoroutine());
 
     }
@@ -26,14 +30,28 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+        Vector3 direction = mousePos - bladeParent.transform.position;
+        // Debug.Log(direction);
+        bladeParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, MathF.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
+        float angle = MathF.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        bladeParent.transform.position = transform.position + Quaternion.Euler(0, 0, angle) * new Vector3(bladeDistance, 0 ,0);
+
+        
+
         if (Input.GetKeyDown(KeyCode.Space) && attackBlocked == false)
         {
             Attack();
         }
-        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.Space))
+
+
+
+
+      /*  if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.Space))
         {
             animator.SetTrigger("Side Attack");
-        }
+        }*/
         else
         {
           //  animator.SetTrigger("");
