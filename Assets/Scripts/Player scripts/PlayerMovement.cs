@@ -29,4 +29,13 @@ public class PlayerMovement : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
     }
 
+    //This function stops player from moving out of 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "mapCollider")
+        {
+            transform.position = new Vector2(-transform.position.x, 0);
+        }
+    }
+
 }
