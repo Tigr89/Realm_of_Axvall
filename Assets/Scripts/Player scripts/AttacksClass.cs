@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttacksClass : MonoBehaviour
 {
     [Header("Attacks cooldowns")]
-    public int basicAttackCooldown = 1;
+    public float basicAttackCooldown = 1;
     public int specialAttackCooldown = 3;
     public int ultimateAttackCooldown = 10;
 
