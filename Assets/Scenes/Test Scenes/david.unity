@@ -749,6 +749,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.46875
       objectReference: {fileID: 0}
+    - target: {fileID: 6614137119261338602, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      propertyPath: attackScript
+      value: 
+      objectReference: {fileID: 232223615}
     - target: {fileID: 7659121806349153440, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       propertyPath: m_Size.x
       value: 0.5
@@ -796,6 +800,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 519420032}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
+      insertIndex: 6
+      addedObject: {fileID: 1804717418}
     - targetCorrespondingSourceObject: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1804717407}
@@ -995,6 +1002,7 @@ MonoBehaviour:
   player: {fileID: 3590196712890668588, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
   Blade: {fileID: 224508335}
   bladeParent: {fileID: 1760704402}
+  bladethrower: {fileID: 1760704402}
   dmg: 0
   bladeDistance: 0
   animator: {fileID: 224508338}
@@ -1010,6 +1018,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12e0c469b9450d4187043ed9865d960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1804717418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232223615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8838635e85bb64fad7d04debf07052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicAttackCooldown: 1
+  specialAttackCooldown: 3
+  ultimateAttackCooldown: 10
+  boltDamage: 0
+  boltSpeed: 0
+  fireballDamage: 0
+  fireballSpeed: 0
+  lightningBoltDamagePerSecond: 0
+  lightningBoltDuration: 0
+  swingDamage: 0
+  slamDamage: 0
+  slamKnockback: 0
+  whirlwindDamagePerSecond: 0
+  whirlwindDuration: 0
+  playerAttack: {fileID: 1804717407}
+  basicKnife: {fileID: 3825785865466489792, guid: 9139426ea99f4634f958a30744a51d27, type: 3}
+  knifeDamage: 10
+  knifeSpeed: 5
+  knifeLifetime: 1
+  arrowDamage: 10
+  arrowSpeed: 10
+  arrowLifetime: 2
+  arrowRainDuration: 5
+  arrowRainDamagePerSecond: 5
+  basicArrow: {fileID: 1214641080154895485, guid: 8df852a5b2e8b8b48832e7b5a3cd4ec8, type: 3}
+  arrowRain: {fileID: 111032241097755575, guid: af9ef92416f491b4c81566a8743484d6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
