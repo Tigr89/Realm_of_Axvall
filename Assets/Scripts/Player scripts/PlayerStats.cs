@@ -1,7 +1,9 @@
 using UnityEngine;
 
 public class PlayerStats : PlayerBase
-{ 
+{
+    [Header("Attack script")]
+    public GameObject attackScript;
 
     [Header("Class Bools")]
     private bool isWarrior; //Tobias ändrat till private för att inte förvirra de som jobbar med spelaren
@@ -32,7 +34,20 @@ public class PlayerStats : PlayerBase
         {
             levelUp();
         }
-        
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            attackScript.GetComponent<AttacksClass>().SelectBasicAttack(classString);
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            attackScript.GetComponent<AttacksClass>().SelectSpecialAttack(classString);
+        }
+        if (Input.GetMouseButtonDown(2))
+        {
+            attackScript.GetComponent<AttacksClass>().SelectUltimateAttack(classString);
+        }
+
     }
     public void changeClass()
     {
