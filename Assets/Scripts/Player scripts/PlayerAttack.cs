@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject player;
     public GameObject Blade;
     public GameObject bladeParent;
+    public GameObject bladethrower;
     
     public int dmg;
     [SerializeField] private float bladeDistance = 1.5f;
@@ -40,22 +41,16 @@ public class PlayerAttack : MonoBehaviour
 
         
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && attackBlocked == false)
-        {
-            Attack();
-        }
-
-
-
+        
 
       /*  if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.Space))
         {
             animator.SetTrigger("Side Attack");
-        }*/
-        else
+        }
+            else
         {
           //  animator.SetTrigger("");
-        }
+        }*/
 
     }
 

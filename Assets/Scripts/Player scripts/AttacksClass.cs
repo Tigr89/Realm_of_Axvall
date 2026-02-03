@@ -33,6 +33,11 @@ public class AttacksClass : MonoBehaviour
     public float slamKnockback = 0f;
     public int whirlwindDamagePerSecond = 0;
     public float whirlwindDuration = 0f;
+    public PlayerAttack playerAttack;
+    public GameObject basicKnife;
+    public int knifeDamage;
+    public float knifeSpeed;
+    public float knifeLifetime;
 
     [Header("Ranger Attacks stats")]
     public int arrowDamage = 10;
@@ -46,6 +51,7 @@ public class AttacksClass : MonoBehaviour
 
     private Vector3 mousePos;
 
+    
     public void SelectBasicAttack(string _klass)
     {
         if (canBasicAttack)
@@ -144,11 +150,14 @@ public class AttacksClass : MonoBehaviour
 
     protected void WarriorBasicAttack()
     {
-        //do warrior basic attack
+        playerAttack.Attack();
     }
     protected void WarriorSpecialAttack()
     {
-        //do warrior special attack
+        var new_basic_knife = Instantiate(basicKnife, transform.position, Quaternion.identity);
+        new_basic_knife.GetComponent<Knifes>().knifesProjectileSpeed = knifeSpeed;
+        new_basic_knife.GetComponent<Knifes>().lifetimeSeconds = knifeLifetime;
+        new_basic_knife.GetComponent<Knifes>().knifeDamage = knifeDamage;
     }
     protected void WarriorUltimateAttack()
     {
