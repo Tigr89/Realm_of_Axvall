@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 2518608146043638409}
   - component: {fileID: 5138130451785439351}
   - component: {fileID: 9018669315984856790}
+  - component: {fileID: -5246687156572608634}
+  - component: {fileID: -1788863796508758953}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -69,9 +71,6 @@ MonoBehaviour:
   inteligence: 5
   dexterity: 5
   experience: 0
-  isWarrior: 0
-  isMage: 1
-  isRogue: 0
   classString: WARRIOR
   experienceToNextLevel: 100
 --- !u!212 &7659121806349153440
@@ -334,6 +333,132 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 0}
   inventory: {fileID: 6859420790782573475}
+--- !u!82 &-5246687156572608634
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3590196712890668588}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-1788863796508758953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3590196712890668588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee2d08314262a44e90c93235f7d56a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  playerTakeDamageLowPitch: {fileID: 8300000, guid: fb6db2719c4c23946ba74d97602cf35a, type: 3}
+  playerTakeDamageHighPitch: {fileID: 8300000, guid: 59b6beaa082fc994bb69b7221b371545, type: 3}
+  playerFootSteps1: {fileID: 8300000, guid: 60d2af17cf33caf478fd40233c50a402, type: 3}
+  playerFootSteps2: {fileID: 8300000, guid: c7c4ef63ffc5a7348afbce3effa28511, type: 3}
+  playerFootSteps3: {fileID: 8300000, guid: 6929596553dbef24fa705f83d6fa20ed, type: 3}
+  playerFootSteps4: {fileID: 8300000, guid: 4e467505a57dc6a408f208ee53f94683, type: 3}
+  playerFootSteps5: {fileID: 8300000, guid: 1b01849d96f8d614ea368ef9cae437f1, type: 3}
+  playerFootSteps6: {fileID: 8300000, guid: 0d89d6695d04cee45b86f5efec2e407b, type: 3}
+  playerAttackMelee: {fileID: 8300000, guid: 6b6dd762a9b811b41aba0b3ee4f2c3ab, type: 3}
+  playerAttackBow: {fileID: 8300000, guid: 8d5647b91f9ace24c8e38faf8017aea5, type: 3}
+  playerAttackSpell: {fileID: 8300000, guid: a4fb9e844c7c2454383f443e600512b7, type: 3}
+  playerAttackSpell2: {fileID: 8300000, guid: b28a9c7768ab4904593c1251e3a7be2f, type: 3}
+  playerGunShot: {fileID: 8300000, guid: 61203042f430c2d489eb8b2837f13947, type: 3}
+  playerAttackKnifeThrow: {fileID: 8300000, guid: 9727eb3d9ec3e8945a56a976553a0462, type: 3}
+  playerAttackHeavy: {fileID: 8300000, guid: 299a7416cc38a094baec9e690b829636, type: 3}
+  playerDeathSound: {fileID: 8300000, guid: 5458d3a1302a3ca4484c8597f9f33f39, type: 3}
 --- !u!1 &5215930765381892288
 GameObject:
   m_ObjectHideFlags: 0
