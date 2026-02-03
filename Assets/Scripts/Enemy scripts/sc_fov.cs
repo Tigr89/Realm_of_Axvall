@@ -20,6 +20,8 @@ public class FOV : MonoBehaviour
     public GameObject Player;
     public Rigidbody2D Playerrb;
 
+    
+
     //script referens
     
     public bool CanseePlayer{get; private set;}
@@ -97,6 +99,12 @@ public class FOV : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position, transform.position + angle1 * radius);
         Gizmos.DrawLine(transform.position, transform.position + angle2 * radius);
+
+        if(CanseePlayer)
+        {
+            Gizmos.color = Color.black;
+            Gizmos.DrawLine(transform.position, Player.transform.position);
+        }
 
 
     }

@@ -10,18 +10,19 @@ public class AI : MonoBehaviour
     public FOV fov;
     private StateManager states;
 
+    Transform snapShotPosition;
 
     [SerializeField] Transform Target; 
     NavMeshAgent agent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         var Target = GameObject.FindWithTag("target");
-        agent.SetDestination(Target.transform.position);
+        agent.SetDestination(transform.position);
         GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
         fov = enemy.GetComponent<FOV>();
     }
@@ -37,7 +38,15 @@ public class AI : MonoBehaviour
         }
         else if(fov.CanseePlayer == false)
         {
+            if(Target != null)
+            {
+                if(snapShotPosition.position != Target.transform.position)
+                {
+                    snapShotPosition.position = Target.transform.position;
+                }
+            }
             
+            agent.SetDestination(snapShotPosition.position);
             //agent.isStopped = true;
         }
         
