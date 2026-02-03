@@ -65,7 +65,7 @@ public class FOV : MonoBehaviour
                 if(!Physics2D.Raycast(transform.position, diractiontoTarget, DistanctoTarget, ObstructionLayer))
                 {
                     CanseePlayer = true;
-                    Debug.Log(CanseePlayer);
+                    //Debug.Log(CanseePlayer);
                 }
                 else
                 {
