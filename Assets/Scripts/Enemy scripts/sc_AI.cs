@@ -37,7 +37,7 @@ public class AI : MonoBehaviour
         }
         else if(fov.CanseePlayer == false)
         {
-            agent.SetDestination(Target.transform.position);
+            
             //agent.isStopped = true;
         }
         
