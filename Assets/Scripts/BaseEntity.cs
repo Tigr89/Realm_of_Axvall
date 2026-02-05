@@ -24,6 +24,16 @@ public class BaseEntity : MonoBehaviour
         ZOMBIE,
         DRAGON
     }
+
+    public enum animDirection
+    {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
+    }
+    
+    public Vector2 movement;
     public int Health
     {
         get { return health; }
@@ -66,10 +76,45 @@ public class BaseEntity : MonoBehaviour
         set;
     }
 
+    public animDirection Direction
+    {
+        get;
+        set;
+    }
+    public Vector2 Movement
+    {
+        get { return movement; }
+        set { movement = value; }
+    }
+    public animDirection currentAnimDirection
+    {
+        get;
+        set;
+    }
+
     protected void TakeDamage(int damage)
     {
         health -= damage;
         // armor osv
+    }
+    protected void SetAnimDirection()
+    {
+        if (movement.y > 0)
+        {
+            currentAnimDirection = animDirection.UP;
+        }
+        else if (movement.y < 0)
+        {
+            currentAnimDirection = animDirection.DOWN;
+        }
+        else if (movement.x < 0)
+        {
+            currentAnimDirection = animDirection.LEFT;
+        }
+        else if (movement.x > 0)
+        {
+            currentAnimDirection = animDirection.RIGHT;
+        }
     }
     
 }

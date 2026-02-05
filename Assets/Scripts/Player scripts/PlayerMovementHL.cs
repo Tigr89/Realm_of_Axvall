@@ -2,12 +2,12 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovementHL : MonoBehaviour
+public class PlayerMovementHL : PlayerStats
 {
     public float moveSpeed = 3f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    private int dexterity = 10;
+    //private int dexterity = 10;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,13 +22,30 @@ public class PlayerMovementHL : MonoBehaviour
         dexterity = GetComponent<PlayerBase>().dexterity;
         TempMoveInput();
         rb.linearVelocity = moveSpeed * moveInput * dexterity / 10;
+        Movement = moveInput;
+        SetAnimDirection();
         //This line of code handles movement
         //rb.linearVelocity = moveSpeed * moveInput;
-
+        if (currentAnimDirection == animDirection.UP)
+        {
+            Debug.Log("UP");
+        }
+        else if (currentAnimDirection == animDirection.DOWN)
+        {
+            Debug.Log("DOWN");
+        }
+        else if (currentAnimDirection == animDirection.LEFT)
+        {
+            Debug.Log("LEFT");
+        }
+        else if (currentAnimDirection == animDirection.RIGHT)
+        {
+            Debug.Log("RIGHT");
+        }
     }
 
     //This function returns a value between -1 and 1 in both X and Y-axis depending on player input
-    public void Movement(InputAction.CallbackContext context)
+    public void MovementInput(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
     }
