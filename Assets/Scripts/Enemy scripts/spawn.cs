@@ -20,6 +20,7 @@ public class spawn : MonoBehaviour
             Instantiate(enemy, new Vector3(startposx, startposy, 0), Quaternion.identity);
            // stats.GetComponent<statisticsManager>().healthyCount++;
         }
+        startspawn();
     }
 
     // Update is called once per frame
@@ -30,11 +31,14 @@ public class spawn : MonoBehaviour
     }
     IEnumerator SpawnEnemy()
     {
-        float SpawnX = player.transform.position.x + Random.Range(-4.0f, 4.0f);
-        float SpawnY = player.transform.position.y + Random.Range(-4.0f, 4.0f);
+        while (true)
+        {
+            float SpawnX = player.transform.position.x + Random.Range(-4.0f, 4.0f);
+            float SpawnY = player.transform.position.y + Random.Range(-4.0f, 4.0f);
 
-        yield return new WaitForSeconds(2);
-        Instantiate(enemy,new Vector3(SpawnX, SpawnY, 0),transform.rotation);
+            yield return new WaitForSeconds(2);
+            Instantiate(enemy, new Vector3(SpawnX, SpawnY, 0), transform.rotation);
+        }
         yield return null;
        
     }

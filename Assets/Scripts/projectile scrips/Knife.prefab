@@ -51,7 +51,7 @@ MonoBehaviour:
   sprite: {fileID: 6268202348462463113}
   knifesProjectileSpeed: 10
   lifetimeSeconds: 2
-  knifeDamage: 0
+  knifeDamage: 9
 --- !u!50 &5487938567612400525
 Rigidbody2D:
   serializedVersion: 5

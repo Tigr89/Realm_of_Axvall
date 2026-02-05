@@ -30,17 +30,7 @@ public class takedmgenemy: MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Weapon")
-        {
-            enemylive -= 1;
-            if (enemylive <= 0)
-            {
-                spawn.GetComponent<spawn>().startspawn();
-                Destroy(gameObject);
 
-               // SceneManager.LoadScene("Level 2");
-            }
-        }
     }
 
    /* IEnumerator EnemyAttack()

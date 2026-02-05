@@ -6,7 +6,7 @@ public class AttacksClass : MonoBehaviour
 {
     [Header("Attacks cooldowns")]
     public int basicAttackCooldown = 1;
-    public float specialAttackCooldown = 3;
+    public float specialAttackCooldown = 0.5f;
     public int ultimateAttackCooldown = 10;
 
     [Header("Common Attack bools")]
@@ -158,7 +158,7 @@ public class AttacksClass : MonoBehaviour
         var new_basic_knife = Instantiate(basicKnife, transform.position, Quaternion.identity);
         new_basic_knife.GetComponent<Knifes>().knifesProjectileSpeed = knifeSpeed;
         new_basic_knife.GetComponent<Knifes>().lifetimeSeconds = knifeLifetime;
-        new_basic_knife.GetComponent<Knifes>().knifeDamage = knifeDamage;
+        //new_basic_knife.GetComponent<Knifes>().knifeDamage = knifeDamage;
     }
     protected void WarriorUltimateAttack()
     {

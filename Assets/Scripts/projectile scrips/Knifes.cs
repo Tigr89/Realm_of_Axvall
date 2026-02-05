@@ -6,7 +6,7 @@ public class Knifes : MonoBehaviour
     public GameObject sprite;
     public float knifesProjectileSpeed = 10f;
     public float lifetimeSeconds = 2f;
-    public int knifeDamage = 0;
+    public int knifeDamage = 9;
     Vector3 worldMousePos;
     Vector2 direction;
 
@@ -46,5 +46,13 @@ public class Knifes : MonoBehaviour
         Debug.Log($"My direction is {direction}");
         Debug.Log($"My speed is {knifesProjectileSpeed}");
         Debug.Log($"My lifetime is {lifetimeSeconds}");
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+
+            other.GetComponent<EnemyStats>().health -= knifeDamage;
+        }
     }
 }
