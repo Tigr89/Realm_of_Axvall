@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basicAttackCooldown: 1
-  specialAttackCooldown: 3
+  specialAttackCooldown: 0.5
   ultimateAttackCooldown: 10
   boltDamage: 0
   boltSpeed: 0
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   playerAttack: {fileID: 1804717407}
   basicKnife: {fileID: 3825785865466489792, guid: 9139426ea99f4634f958a30744a51d27, type: 3}
   knifeDamage: 10
-  knifeSpeed: 5
+  knifeSpeed: 20
   knifeLifetime: 1
   arrowDamage: 10
   arrowSpeed: 10

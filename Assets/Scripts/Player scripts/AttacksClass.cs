@@ -6,7 +6,7 @@ public class AttacksClass : MonoBehaviour
 {
     [Header("Attacks cooldowns")]
     public int basicAttackCooldown = 1;
-    public int specialAttackCooldown = 3;
+    public float specialAttackCooldown = 3;
     public int ultimateAttackCooldown = 10;
 
     [Header("Common Attack bools")]
@@ -80,6 +80,7 @@ public class AttacksClass : MonoBehaviour
             StartCoroutine(SpecialCooldown());
             if (_klass == "WARRIOR")
             {
+                specialAttackCooldown = 0.5f;
                 WarriorSpecialAttack();
             }
             else if (_klass == "ROGUE")

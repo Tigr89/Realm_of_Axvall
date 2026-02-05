@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float bladeDistance = 1.5f;
 
     public Animator animator;
-    public float delay = 0.3f;
+    public float delay = 0.1f;
     private bool attackBlocked;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -66,7 +66,7 @@ public class PlayerAttack : MonoBehaviour
    
     IEnumerator bladeCoroutine()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
     }
     void Calkdmg()
     {
