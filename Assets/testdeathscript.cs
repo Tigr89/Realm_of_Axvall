@@ -56,7 +56,7 @@ public class EnemyHealth : MonoBehaviour
         // Trigger death animation
         animator.SetTrigger("IsDead");
 
-        // Destroy AFTER animation (adjust time to match your animation length)
+        // Destroy AFTER animation 
         Destroy(gameObject, 1.2f);
     }
 }
