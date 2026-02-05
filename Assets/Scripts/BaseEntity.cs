@@ -30,7 +30,8 @@ public class BaseEntity : MonoBehaviour
         UP,
         DOWN,
         LEFT,
-        RIGHT
+        RIGHT,
+        ZERO
     }
     
     public Vector2 movement;
@@ -103,17 +104,21 @@ public class BaseEntity : MonoBehaviour
         {
             currentAnimDirection = animDirection.UP;
         }
-        else if (movement.y < 0)
+        if (movement.y < 0)
         {
             currentAnimDirection = animDirection.DOWN;
         }
-        else if (movement.x < 0)
+        if (movement.x < 0)
         {
             currentAnimDirection = animDirection.LEFT;
         }
-        else if (movement.x > 0)
+        if (movement.x > 0)
         {
             currentAnimDirection = animDirection.RIGHT;
+        }
+        if (movement.x == 0 && movement.y == 0)
+        {
+            currentAnimDirection = animDirection.ZERO;
         }
     }
     

@@ -7,6 +7,8 @@ public class PlayerMovementHL : PlayerStats
     public float moveSpeed = 3f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    public Animator animator;
+    public bool isMoving;
     //private int dexterity = 10;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,23 +26,39 @@ public class PlayerMovementHL : PlayerStats
         rb.linearVelocity = moveSpeed * moveInput * dexterity / 10;
         Movement = moveInput;
         SetAnimDirection();
+        if (rb.linearVelocity != Vector2.zero)
+        {
+            isMoving = true;
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            isMoving = false;
+            animator.SetBool("isWalking", false);
+            Movement = Vector2.zero;
+        }
         //This line of code handles movement
         //rb.linearVelocity = moveSpeed * moveInput;
         if (currentAnimDirection == animDirection.UP)
         {
-            Debug.Log("UP");
+            animator.SetFloat("inputY", Movement.y);
         }
-        else if (currentAnimDirection == animDirection.DOWN)
+        if (currentAnimDirection == animDirection.DOWN)
         {
-            Debug.Log("DOWN");
+            animator.SetFloat("inputY", Movement.y);
         }
-        else if (currentAnimDirection == animDirection.LEFT)
+        if (currentAnimDirection == animDirection.LEFT)
         {
-            Debug.Log("LEFT");
+            animator.SetFloat("inputX", Movement.x);
         }
-        else if (currentAnimDirection == animDirection.RIGHT)
+        if (currentAnimDirection == animDirection.RIGHT)
         {
-            Debug.Log("RIGHT");
+            animator.SetFloat("inputX", Movement.x);
+        }
+        if (currentAnimDirection == animDirection.ZERO)
+        {
+            animator.SetFloat("inputX", 0);
+            animator.SetFloat("inputY", 0);
         }
     }
 
