@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update()
+      //sätt en if sats så att velocity blir 0 när den dör 
     {
         rb.linearVelocity = moveDirection * moveSpeed;
     }
@@ -58,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
             float waitTime = Random.Range(waitTimeMin, waitTimeMax);
             yield return new WaitForSeconds(waitTime);
         }
+
 
 
     }
