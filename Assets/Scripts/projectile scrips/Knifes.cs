@@ -53,6 +53,7 @@ public class Knifes : MonoBehaviour
         {
 
             other.GetComponent<EnemyStats>().health -= knifeDamage;
+            Destroy(gameObject);
         }
     }
 }
