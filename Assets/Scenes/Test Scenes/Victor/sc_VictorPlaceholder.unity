@@ -9610,6 +9610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5941043bee5aa8d4cb550adbb80007c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fov: {fileID: 2077855566}
   attackState: {fileID: 6046367825797778669}
   idleState: {fileID: 7206790823975371365}
   isInAttackRange: 0

@@ -2,11 +2,21 @@ using UnityEngine;
 
 public class ChaseState : State
 {
+
+    public FOV fov;
+
     public AttackState attackState;
     public IdleState idleState;
     public bool isInAttackRange;
     [SerializeField] private float speed = 1.5f;
     private GameObject player;
+    private GameObject enemy;
+
+    void Awake()
+    {
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        fov = enemy.GetComponent<FOV>();
+    }
 
     public override State RunCurrentState()
     {
@@ -15,10 +25,20 @@ public class ChaseState : State
             isInAttackRange = false;
             return attackState;
         }
-        else 
+        if(fov.CanseePlayer == false)
         {
-            return this;
+            //fov.CanseePlayer = false;
+            return idleState;
+           
         }
+        else
+        {
+            
+            return this;
+            
+        }
+
+
 
 
     }
