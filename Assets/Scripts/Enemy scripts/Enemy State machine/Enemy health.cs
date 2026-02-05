@@ -7,6 +7,7 @@ public class Enemyhealth : MonoBehaviour
     public int enemyHealth;
     void Start()
     {
+        TakingDamage(1);
         enemyHealth = baseEnemyHealth * enemyLevel;
     }
 
@@ -21,7 +22,8 @@ public class Enemyhealth : MonoBehaviour
         enemyHealth -= damageTaken;
         if (enemyHealth <= 0)
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 1.2f);
         }
     }
 }
+
