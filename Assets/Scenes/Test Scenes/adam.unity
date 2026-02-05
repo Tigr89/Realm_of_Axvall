@@ -444,15 +444,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8838635e85bb64fad7d04debf07052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackCooldown: 0.5
-  specialAttackCooldown: 3
+  basicAttackCooldown: 0.8
+  specialAttackCooldown: 7
   ultimateAttackCooldown: 15
-  boltDamage: 0
-  boltSpeed: 0
-  fireballDamage: 0
-  fireballSpeed: 0
-  lightningBoltDamagePerSecond: 0
-  lightningBoltDuration: 0
+  boltDamage: 6
+  boltSpeed: 20
+  boltLifetime: 3
+  fireballDamage: 40
+  fireballSpeed: 10
+  fireballLifetime: 3
+  lightningBoltDamagePerSecond: 10
+  lightningBoltDuration: 10
+  basicBolt: {fileID: 1870416802641288630, guid: fc58aa5978e3a1145b2a868973825139, type: 3}
+  basicFireball: {fileID: 6814678001941993507, guid: ae2c071c6cf062c4fa5845c76335e45f, type: 3}
+  LightningBolt: {fileID: 7360350235442199266, guid: 364eb419bd057f446bafce6fb2bd3a12, type: 3}
   swingDamage: 0
   slamDamage: 0
   slamKnockback: 0
@@ -676,11 +681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4056959393542868596, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.97
+      value: 11.48
       objectReference: {fileID: 0}
     - target: {fileID: 4056959393542868596, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.43
+      value: -1.58
       objectReference: {fileID: 0}
     - target: {fileID: 4056959393542868596, guid: 48c82bf5edf429045b0342d2a8c20ab0, type: 3}
       propertyPath: m_LocalPosition.z

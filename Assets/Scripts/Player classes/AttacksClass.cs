@@ -18,12 +18,16 @@ public class AttacksClass : MonoBehaviour
     // Mage attack stats would go here
     // projectile speed, damage, area of effect, etc.
     public int boltDamage = 0;
-    public float boltSpeed = 0f;
-    public float fireballDamage = 0f;
-    public float fireballSpeed = 0f;
+    public float boltSpeed = 5f;
+    public float boltLifetime = 2f;
+    public int fireballDamage = 0;
+    public float fireballSpeed = 2f;
+    public float fireballLifetime = 5f;
     public float lightningBoltDamagePerSecond = 0f;
-    public float lightningBoltDuration = 0f;
-
+    public float lightningBoltDuration = 05f;
+    public GameObject basicBolt;
+    public GameObject basicFireball;
+    public GameObject LightningBolt;
 
     [Header("Warrior Attacks stats")]
     // Warrior attack stats would go here
@@ -157,15 +161,31 @@ public class AttacksClass : MonoBehaviour
 
     protected void MageBasicAttack()
     {
-        //do mage basic attack
+
+        var new_basic_bolt = Instantiate(basicBolt, transform.position, Quaternion.identity);
+        new_basic_bolt.GetComponent<Bolt>().projectileSpeed = boltSpeed;
+        new_basic_bolt.GetComponent<Bolt>().lifetimeSeconds = boltLifetime;
+        new_basic_bolt.GetComponent<Bolt>().damage = boltDamage;
     }
     protected void MageSpecialAttack()
     {
         //do mage special attack
+        Debug.Log("Mage Attack 2 executed.");
+        var new_special_arrow = Instantiate(basicFireball, transform.position, Quaternion.identity);
+        new_special_arrow.GetComponent<FireBall>().projectileSpeed = fireballSpeed;
+        new_special_arrow.GetComponent<FireBall>().lifetimeSeconds = fireballLifetime;
+        new_special_arrow.GetComponent<FireBall>().damage = fireballDamage;
+         
     }
     protected void MageUltimateAttack()
     {
         //do mage ultimate attack
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log("Ranger Ultimate executed.");
+        var new_ultimate_LightningBolt = Instantiate(LightningBolt, mousePos, Quaternion.identity);
+        new_ultimate_LightningBolt.transform.position = new Vector3(new_ultimate_LightningBolt.transform.position.x, new_ultimate_LightningBolt.transform.position.y, 0f);
+        new_ultimate_LightningBolt.GetComponent<LightningBolt>().damagePerSecond = arrowRainDamagePerSecond;
+        new_ultimate_LightningBolt.GetComponent<LightningBolt>().lifetimeSeconds = arrowRainDuration;
     }
     private IEnumerator BasicCooldown()
     {
